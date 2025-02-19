@@ -1,16 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net9.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <Title>WoW2.Backbone.Language.Core.Extensions.Enums</Title>
-        <PackageId>WoW2.Backbone.Language.Core.Extensions.Enums</PackageId>
-        <Description>Extensions for enum types to enhance functionality and provide additional utilities.</Description>
+        <Title>WoW2.Backbone.Language.Core.Types.Abstractions</Title>
+        <PackageId>WoW2.Backbone.Language.Core.Types.Abstractions</PackageId>
+        <Description>Abstractions for core type definitions in .NET applications.</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageTags>language, core, enums, extensions</PackageTags>
-        <Version>9.0.0-alpha.0</Version>
+        <PackageTags>types, abstractions, core, infrastructure</PackageTags>
+        <Version>8.0.0-alpha.0</Version>
         <Authors>WoW 2.0 Team</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/WoW-2-0-Backbone/Backbone.Language.Core</PackageProjectUrl>
@@ -23,5 +23,5 @@
         <None Include="wow2.png" Pack="true" PackagePath=""/>
         <None Include="README.md" Pack="true" PackagePath=""/>
     </ItemGroup>
-    
+
 </Project>

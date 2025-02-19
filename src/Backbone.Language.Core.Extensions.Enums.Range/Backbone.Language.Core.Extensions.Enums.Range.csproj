@@ -5,11 +5,11 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <Title>WoW2.Backbone.Language.Core.Extensions.Enums</Title>
-        <PackageId>WoW2.Backbone.Language.Core.Extensions.Enums</PackageId>
-        <Description>Extensions for enum types to enhance functionality and provide additional utilities.</Description>
+        <Title>WoW2.Backbone.Language.Core.Extensions.Enums.Ranges</Title>
+        <PackageId>WoW2.Backbone.Language.Core.Extensions.Enums.Ranges</PackageId>
+        <Description>Extension for correlated enums using numeric range.</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageTags>language, core, enums, extensions</PackageTags>
+        <PackageTags>language, core, enums, extensions, ranges, correlated-enums</PackageTags>
         <Version>9.0.0-alpha.0</Version>
         <Authors>WoW 2.0 Team</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -23,5 +23,5 @@
         <None Include="wow2.png" Pack="true" PackagePath=""/>
         <None Include="README.md" Pack="true" PackagePath=""/>
     </ItemGroup>
-    
+
 </Project>
