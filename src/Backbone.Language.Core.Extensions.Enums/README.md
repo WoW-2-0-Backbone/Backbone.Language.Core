@@ -16,12 +16,25 @@ dotnet add package WoW2.Backbone.Language.Core.Extensions.Enums
 
 ## Performance
 
-| Method                        |        Mean |     Error |    StdDev |   Gen0 | Allocated |
-| ----------------------------- | ----------: | --------: | --------: | -----: | --------: |
-| GetDescription_Existing       |   355.82 ns |  7.075 ns |  6.271 ns | 0.0324 |     272 B |
-| GetDescriptionOrValue_Missing |    56.26 ns |  0.477 ns |  0.423 ns | 0.0029 |      24 B |
-| TryParseByDescription_Valid   | 1,566.55 ns | 15.991 ns | 14.176 ns | 0.1736 |    1464 B |
-| TryParseByDescription_Invalid | 1,777.18 ns | 16.346 ns | 15.290 ns | 0.1717 |    1440 B |
+| Method                                                    |        Mean |     Error |    StdDev |   Gen0 | Allocated |
+| --------------------------------------------------------- | ----------: | --------: | --------: | -----: | --------: |
+| Benchmark_GetDescription_Existing                         |   347.53 ns |  6.261 ns |  5.228 ns | 0.0324 |     272 B |
+| Benchmark_GetDescriptionOrValue_Existing                  |   344.25 ns |  3.247 ns |  2.879 ns | 0.0324 |     272 B |
+| Benchmark_GetDescriptionOrValue_Missing                   |    56.03 ns |  0.795 ns |  0.705 ns | 0.0029 |      24 B |
+| Benchmark_TryGetDescription_Existing                      |   348.34 ns |  5.894 ns |  5.225 ns | 0.0324 |     272 B |
+| Benchmark_TryGetDescription_Missing                       |    59.25 ns |  1.176 ns |  1.155 ns | 0.0029 |      24 B |
+| Benchmark_ParseByDescription_Valid                        | 1,575.74 ns | 13.252 ns | 11.066 ns | 0.1717 |    1440 B |
+| Benchmark_TryParseByDescription_Generic_Valid             | 1,560.11 ns |  8.809 ns |  8.240 ns | 0.1736 |    1464 B |
+| Benchmark_TryParseByDescription_Generic_Invalid           | 1,789.04 ns | 24.598 ns | 20.541 ns | 0.1717 |    1440 B |
+| Benchmark_TryParseByDescription_NonGeneric_Valid          | 1,970.65 ns | 18.489 ns | 15.439 ns | 0.1755 |    1488 B |
+| Benchmark_TryParseByDescription_NonGeneric_Invalid        | 1,709.78 ns | 10.634 ns |  9.426 ns | 0.1793 |    1512 B |
+| Benchmark_GetAllValuesAndDescriptions_Generic             |          NA |        NA |        NA |     NA |        NA |
+| Benchmark_GetAllValuesAndDescriptions_NonGeneric          |          NA |        NA |        NA |     NA |        NA |
+| Benchmark_GetAllAvailableValuesAndDescriptions_Generic    | 1,539.13 ns | 15.890 ns | 14.086 ns | 0.1602 |    1352 B |
+| Benchmark_GetAllAvailableValuesAndDescriptions_NonGeneric | 1,696.32 ns |  7.668 ns |  5.986 ns | 0.1659 |    1400 B |
+| Benchmark_GetCustomAttributeValue_Existing                |   337.99 ns |  0.997 ns |  0.933 ns | 0.0324 |     272 B |
+| Benchmark_GetCustomAttributeValue_Missing                 |    53.17 ns |  0.172 ns |  0.143 ns | 0.0029 |      24 B |
+| Benchmark_GetAllValuesAndAttributeValues                  |   848.70 ns |  4.843 ns |  4.044 ns | 0.0916 |     768 B |
 
 ## Structure
 

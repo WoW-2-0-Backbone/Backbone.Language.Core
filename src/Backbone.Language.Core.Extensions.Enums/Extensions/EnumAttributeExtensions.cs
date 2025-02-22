@@ -18,7 +18,7 @@ public static class EnumAttributeExtensions
         var field = value.GetType().GetField(value.ToString());
         return field?.GetCustomAttribute<TAttribute>();
     }
-
+    
     /// <summary>
     /// Gets all values of the enum along with a specified attribute's value as a list of key-value pairs.
     /// </summary>
