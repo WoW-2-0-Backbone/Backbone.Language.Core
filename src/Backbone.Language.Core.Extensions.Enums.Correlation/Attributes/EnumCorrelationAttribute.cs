@@ -6,7 +6,7 @@ namespace Backbone.Language.Core.Extensions.Enums.Correlation.Attributes;
 /// <param name="enumType">The correlated enum type.</param>
 /// <param name="correlatedValue">The correlated enu value.</param>
 [AttributeUsage(AttributeTargets.Field)]
-public class CorrelatedEnumAttribute(Type enumType, Enum correlatedValue)
+public class EnumCorrelationAttribute(Type enumType, Enum correlatedValue)
     : Attribute
 {
     /// <summary>
@@ -26,8 +26,8 @@ public class CorrelatedEnumAttribute(Type enumType, Enum correlatedValue)
 /// <typeparam name="TEnum">The correlated enum type.</typeparam>
 /// <param name="correlatedValue">The correlated enu value.</param>
 [AttributeUsage(AttributeTargets.Field)]
-public class CorrelatedEnumAttribute<TEnum>(TEnum correlatedValue)
-    : CorrelatedEnumAttribute(typeof(TEnum), correlatedValue)
+public class EnumCorrelationAttribute<TEnum>(TEnum correlatedValue)
+    : EnumCorrelationAttribute(typeof(TEnum), correlatedValue)
     where TEnum : struct, Enum
 {
     /// <summary>
