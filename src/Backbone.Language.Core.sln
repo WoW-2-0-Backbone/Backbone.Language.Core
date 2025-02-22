@@ -30,6 +30,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FFC686B1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backbone.Language.Core.Extensions.Enums.Benchmarks", "Backbone.Language.Core.Extensions.Enums.Benchmarks\Backbone.Language.Core.Extensions.Enums.Benchmarks.csproj", "{B224127A-EB89-48CD-B6E4-15FDE1996FE7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backbone.Language.Core.Extensions.Enums.Category", "Backbone.Language.Core.Extensions.Enums.Category\Backbone.Language.Core.Extensions.Enums.Category.csproj", "{6F806687-A0B8-4761-A6C5-9774C93BE6CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -76,6 +78,10 @@ Global
 		{B224127A-EB89-48CD-B6E4-15FDE1996FE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B224127A-EB89-48CD-B6E4-15FDE1996FE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B224127A-EB89-48CD-B6E4-15FDE1996FE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F806687-A0B8-4761-A6C5-9774C93BE6CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F806687-A0B8-4761-A6C5-9774C93BE6CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F806687-A0B8-4761-A6C5-9774C93BE6CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F806687-A0B8-4761-A6C5-9774C93BE6CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{EBA55136-C488-44A6-9970-88B734AA4291} = {354142D1-373D-4694-BEB6-114093E4E21B}
@@ -89,5 +95,6 @@ Global
 		{FFC686B1-8680-4E9D-8F83-3EFC66E9FD5A} = {354142D1-373D-4694-BEB6-114093E4E21B}
 		{9628D03C-FB56-469A-9B93-0D873D1AD919} = {FFC686B1-8680-4E9D-8F83-3EFC66E9FD5A}
 		{B224127A-EB89-48CD-B6E4-15FDE1996FE7} = {FFC686B1-8680-4E9D-8F83-3EFC66E9FD5A}
+		{6F806687-A0B8-4761-A6C5-9774C93BE6CF} = {354142D1-373D-4694-BEB6-114093E4E21B}
 	EndGlobalSection
 EndGlobal
