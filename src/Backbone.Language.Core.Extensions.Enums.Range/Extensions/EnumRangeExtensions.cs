@@ -8,8 +8,46 @@ namespace Backbone.Language.Core.Extensions.Enums.Range.Extensions;
 /// </summary>
 public static class EnumRangeExtensions
 {
-    #region Attribute Validation
+    #region Definition Validation
 
+    /// <summary>
+    /// Validates if the enum type is a proper range enum based on the <see cref="EnumRangeAttribute"/> applied to it.
+    /// </summary>
+    /// <typeparam name="TRangeEnum">The enum type to be validated.</typeparam>
+    /// <returns>True if the enum is a valid range enum, otherwise false.</returns>
+    /// <exception cref="InvalidOperationException">Thrown if the enum does not have the <see cref="EnumRangeAttribute"/> or if it fails validation.</exception>
+    public static bool IsValidRangeEnum<TRangeEnum>() where TRangeEnum : Enum
+    {
+        var rangeValue = GetEnumRangeValue<TRangeEnum>();
+
+        var values = Enum.GetValues(typeof(TRangeEnum))
+            .Cast<TRangeEnum>()
+            .Select(value => Convert.ToInt64(value))
+            .ToList();
+
+        return values.Zip(values.Skip(1), (prev, next) => next - prev)
+            .All(diff => diff == rangeValue.Range);
+    }
+    
+    /// <summary>
+    /// Gets the minimum and maximum boundaries of given range enum.
+    /// </summary>
+    /// <param name="enumValue">An enum value whose range is to be calculated.</param>
+    /// <returns>A tuple containing the minimum and maximum values for the given enum value.</returns>
+    /// <exception cref="InvalidOperationException">If range enum type is not a range enum.</exception>
+    public static (long Min, long Max) GetValueRange(this Enum enumValue)
+    {
+        var range = GetEnumRangeValue(enumValue.GetType());
+        var min = Convert.ToInt64(enumValue);
+        var max = min + range.Range;
+
+        return (min, max);
+    }
+
+    #endregion
+    
+    #region Parsing Value
+    
     /// <summary>
     /// Validates and retrieves the <see cref="EnumRangeAttribute"/> applied to the specified enum type.
     /// </summary>
@@ -36,29 +74,6 @@ public static class EnumRangeExtensions
 
         return rangeValue;
     }
-
-    #endregion
-
-    #region Definition Validation
-
-    /// <summary>
-    /// Validates if the enum type is a proper range enum based on the <see cref="EnumRangeAttribute"/> applied to it.
-    /// </summary>
-    /// <typeparam name="TRangeEnum">The enum type to be validated.</typeparam>
-    /// <returns>True if the enum is a valid range enum, otherwise false.</returns>
-    /// <exception cref="InvalidOperationException">Thrown if the enum does not have the <see cref="EnumRangeAttribute"/> or if it fails validation.</exception>
-    public static bool IsValidRangeEnum<TRangeEnum>() where TRangeEnum : Enum
-    {
-        var rangeValue = GetEnumRangeValue<TRangeEnum>();
-
-        var values = Enum.GetValues(typeof(TRangeEnum))
-            .Cast<TRangeEnum>()
-            .Select(value => Convert.ToInt64(value))
-            .ToList();
-
-        return values.Zip(values.Skip(1), (prev, next) => next - prev)
-            .All(diff => diff == rangeValue.Range);
-    }
-
+    
     #endregion
 }

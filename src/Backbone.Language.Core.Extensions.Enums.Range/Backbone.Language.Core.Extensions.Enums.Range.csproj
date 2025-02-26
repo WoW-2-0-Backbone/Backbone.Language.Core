@@ -10,7 +10,7 @@
         <Description>Extension for correlated enums using numeric range.</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageTags>language, core, enums, extensions, ranges, correlated-enums</PackageTags>
-        <Version>9.0.0-alpha.1</Version>
+        <Version>9.0.0-alpha.2</Version>
         <Authors>WoW 2.0 Team</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/WoW-2-0-Backbone/Backbone.Language.Core</PackageProjectUrl>

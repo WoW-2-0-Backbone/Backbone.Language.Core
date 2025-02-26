@@ -10,7 +10,7 @@
         <Description>Extension for enum categories with enhanced grouping and classification support.</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageTags>language, core, enums, extensions, category, enum-categories</PackageTags>
-        <Version>9.0.0-alpha.1</Version>
+        <Version>9.0.0-alpha.2</Version>
         <Authors>WoW 2.0 Team</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/WoW-2-0-Backbone/Backbone.Language.Core</PackageProjectUrl>
@@ -26,7 +26,7 @@
 
     <ItemGroup>
       <PackageReference Include="WoW2.Backbone.Language.Core.Extensions.Enums.Correlation" Version="9.0.0-alpha.1" />
-      <PackageReference Include="WoW2.Backbone.Language.Core.Extensions.Enums.Ranges" Version="9.0.0-alpha.1" />
+      <PackageReference Include="WoW2.Backbone.Language.Core.Extensions.Enums.Ranges" Version="9.0.0-alpha.2" />
     </ItemGroup>
 
 </Project>

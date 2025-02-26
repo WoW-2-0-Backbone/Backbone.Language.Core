@@ -70,7 +70,7 @@ public static class CategoryEnumExtensions
     /// <param name="type">The type value.</param>
     /// <returns>The category associated with the type.</returns>
     /// <exception cref="ArgumentException">Thrown when the type doesn't belong to any category.</exception>
-    public static TCategory GetCategory<TType, TCategory>(this TType type)
+    public static TCategory GetEnumCategory<TType, TCategory>(this TType type)
         where TType : Enum
         where TCategory : Enum
     {
